@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header';
 import Wrapper from './components/Wrapper';
-import Dashboard from './pages/dashboard';
+import Dashboard from './pages/Dashboard';
 
 const theme = createTheme({
   palette: {
