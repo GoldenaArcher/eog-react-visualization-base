@@ -14,11 +14,12 @@ const Dashboard = () => {
   const { loading, error, data } = useQuery(queryMetrics);
 
   useEffect(() => {
+    if (loading) return;
     if (error) {
       dispatch(getMetricsFail(error.message));
       return;
     }
-    dispatch(getMetricsSuccess(data));
+    dispatch(getMetricsSuccess(data.metrics));
   }, [error, data]);
 
   return (
@@ -26,7 +27,7 @@ const Dashboard = () => {
       <Loading loading={loading} />
       <Box style={{ display: 'flex', justifyContent: 'space-between' }}>
         <CurrentData />
-        <Dropdown />
+        <Dropdown metrics={data?.metrics || []} />
       </Box>
       <Chart />
     </Container>
