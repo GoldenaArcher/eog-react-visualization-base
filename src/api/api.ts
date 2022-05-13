@@ -1,3 +1,5 @@
+import { gql } from '@apollo/client';
+
 // query {
 // getMetrics
 // }
@@ -29,4 +31,8 @@
 //     }
 //   }
 
-export const test = '';
+export const queryMetrics = gql`
+  {
+    metrics: getMetrics
+  }
+`;

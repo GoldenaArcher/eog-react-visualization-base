@@ -27,12 +27,14 @@ export const getMetrics = () => ({
   type: GET_METRICS,
 });
 
-export const getMetricsSuccess = () => ({
+export const getMetricsSuccess = (data: string[]) => ({
   type: GET_METRICS_SUCCESS,
+  data,
 });
 
-export const getMetricsFail = () => ({
+export const getMetricsFail = (message: string) => ({
   type: GET_METRICS_FAIL,
+  message,
 });
 
 export type GraphQLUnionType = GetMetricsAction | GetMetricsActionSuccess | GetMetricsActionFail;
