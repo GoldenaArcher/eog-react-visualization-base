@@ -1,10 +1,6 @@
 import React, { FC } from 'react';
 import {
-  ApolloClient,
-  ApolloProvider,
-  useQuery,
-  gql,
-  InMemoryCache,
+  ApolloClient, ApolloProvider, useQuery, gql, InMemoryCache,
 } from '@apollo/client';
 import { useGeolocation } from 'react-use';
 import LinearProgress from '@material-ui/core/LinearProgress';
