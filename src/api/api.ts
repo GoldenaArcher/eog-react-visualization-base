@@ -15,4 +15,18 @@
 //     }
 //   }
 
+// query {
+//     getMultipleMeasurements(input: [{
+//       metricName: "tubingPressure",
+//       after: 1652402124472
+//     }]) {
+//       metric,
+//       measurements {
+//         at,
+//         value,
+//         unit
+//       }
+//     }
+//   }
+
 export const test = '';
